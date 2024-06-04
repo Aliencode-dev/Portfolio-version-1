@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Chidiebere Vincent Okpechi</title>
+    <link rel="icon" type="image/png" href="https://flinoid.com/images/2.png">
+    <link rel="apple-touch-icon" href="https://flinoid.com/images/2.png">
+    <meta name="robots" content="index, follow">
+    <link type="text/css" rel="stylesheet" href="css/theme.css">
+
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#nav').click(function(event){
+                let notifdiv = document.getElementById("notif");
+                let navsvg = document.getElementById("nav");
+                notifdiv.classList.toggle("nav-drop");
+                navsvg.classList.toggle("navclose");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="main">
+                <!-- NOTIFICATION START-->
+                <div class="notify" id="notif">
+                    <div class="container col nav-list">
+                        <a href="./alien/about.html">About Me</a>
+                        <a href="https://chidiebere.net">Portfolio</a>
+                        <a href="./alien/contact.html">Contact</a>
+                    </div>
+                </div>
+                <!-- NOTIFICATION ENDS -->
+                <header class="head">
+                    <div class="container row minwidth">
+                        <a class="name">VINCENT<span>.C.O</span></a>
+                        <div class="navopen m-nav" id="nav"><span></span></div>
+                        <div class="pc-nav" id="nav">
+                            <ul class="container row">
+                                <li><a href="https://chidiebere.net">Portfolio</a></li>
+                                <li><a href="./alien/about.html">About Me</a></li>
+                                <li><a href="./alien/contact.html">Contact</a></li>
+                            </ul>
+                            <div class="social-cont">
+                                <a href="https://github.com/Aliencode-dev" title="My GitHub Link" target="_blank" rel="noopener" class="social-svg"><span class="github"></span></a>
+                                <a href="https://www.linkedin.com/in/vincent-okpechi/" title="My LinkedIn Link" target="_blank" rel="noopener" class="social-svg"><span class="linkedin"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="img-cont-home minheight">
+                    <div class="overlay"></div>
+                    <img src="./alien/svg/vin2.webp" alt="Vincent Chidiebere Okpechi">
+                </div>
+                <form action="" class="contact-form">
+                    <h1>Contact Me!</h1>
+
+                    <label for="name"></label>
+                    <input type="text" id="name" placeholder="Enter Your Full Name Please !!!">
+                    <label for="email"></label>
+                    <input type="text" id="email" placeholder="Enter Your Active Email Address">
+                    <label for="details"></label>
+                    <textarea name="details" id="details" cols="30" rows="10" placeholder="Tell me what you have in mind here..."></textarea>
+                    <button type="submit" class="submit-btn">Send Email</button>
+                    <div class="contact-social">
+                        <a class="myig" title="My Instagram Page" rel="nofollow" href="https://instagram.com/alien_code_dev"><span></span></a>
+                        <a class="mywhatsapp" title="My WhatsApp" rel="nofollow" href="https://wa.me/2348109694608"><span></span></a>
+                    </div>
+                </form>
+    </div>
+</body>
+</html>

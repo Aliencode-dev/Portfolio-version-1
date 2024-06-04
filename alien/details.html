@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vincent Chidiebere Okpechi - </title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link rel="icon" type="image/png" href="https://flinoid.com/images/2.png">
+        <link rel="apple-touch-icon" href="https://flinoid.com/images/2.png">
+        <meta content = "width=device-width, initial-scale=1, viewport-fit=cover" name="viewport">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Vincent Chidiebere Okpechi">
+        <meta name="description" content="Product Designer and Front End Developer with a passion for designing beautiful and functional user experiences.">
+        <meta content="Vincent Chidiebere Okpechi" property="og:site_name">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://ireserve.shop">
+        <meta content="The ultimate website builder for your business - iReserve" property="og:title">
+        <meta content="Home Page" property="og:description">
+        <meta content="https://ireserve.shop/ireserve.png" property="og:image">
+        <meta content="https://flinoid.com/images/ireserve.png" property="og:image">
+        <meta name="twitter:site" content="@ireserve_shop">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="The ultimate website builder for your business - iReserve">
+        <meta name="twitter:description" content="Home Page">
+        <meta name="twitter:image" content="https://ireserve.shop/ireserve.png">
+        <meta name="twitter:creator" content="@ireserve_shop">
+        <meta property="twitter:domain" value="www.ireserve.shop">
+        <link type="text/css" rel="stylesheet" href="css/theme.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#nav').click(function(event){
+                    let notifdiv = document.getElementById("notif");
+                    let navsvg = document.getElementById("nav");
+                    notifdiv.classList.toggle("nav-drop");
+                    navsvg.classList.toggle("navclose");
+                });
+            });
+        </script>
+        </head>
+        <!-- Google tag (gtag.js) -->
+        <body>
+            <!-- Google Tag Manager (noscript) -->
+        <!-- End Google Tag Manager (noscript) -->
+            <div class="main">
+                <!-- NOTIFICATION START-->
+                <div class="notify" id="notif">
+                    <div class="container col nav-list">
+                        <a href="./">Portfolio</a>
+                        <a href="./about.html">About</a>
+                        <a href="./contact.html">Contact</a>
+                    </div>
+                </div>
+                <!-- NOTIFICATION ENDS -->
+                <header class="head">
+                    <div class="container row">
+                        <a class="name">VINCENT<span>.C.O</span></a>
+                        <div class="navopen" id="nav"><span></span></div>
+                    </div>
+                </header>
+                <div class="img-cont">
+                    <div class="txt-header">
+                        <h2 class="h2">{{name}}</h2>
+                        <p class="p">{{des}}</p>
+                        <span></span>
+                    </div>
+                    <div class="img-header">
+                        <img src="./alien{{banner}}" alt="{{name}}">
+                    </div>
+                </div>
+                <div class="works-cont">
+                    <div class="content">
+                        <a href="./project.html" class="card">
+                            <div class="inner-card">
+                                <div class="img-frame">
+                                    <img src="./svg/vin.jpg" alt="{{name}} Product image">
+                                </div>
+                                <div class="text-frame">
+                                    <h3 class="h3">Ecommerce Clothing Template</h3>
+                                    <p class="p">Web Design Template</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <footer class="foot">© 2023 Vincent Chidiebere Okpechi</footer>
+            </div>
+            </body>
+            </html>

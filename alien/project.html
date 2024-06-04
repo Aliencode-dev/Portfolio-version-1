@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{name}} - Vincent Chidiebere Okpechi</title>
+        <link rel="shortcut icon" href="https://flinoid.com/images/2.ico" type="image/x-icon">
+        <link rel="icon" type="image/png" href="https://flinoid.com/images/2.png">
+        <link rel="apple-touch-icon" href="https://flinoid.com/images/2.png">
+        <meta content = "width=device-width, initial-scale=1, viewport-fit=cover" name="viewport">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Chidiebere Vincent Okpechi">
+        <meta name="description" content="{{des}} - Chidiebere Vincent Okpechi">
+        <meta content="Vincent Chidiebere Okpechi" property="og:site_name">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://chidiebere.net">
+        <meta content="{{des}} - Chidiebere Vincent Okpechi" property="og:title">
+        <meta content="{{name}}" property="og:description">
+        <meta content="https://flinoid.com/images/2.png" property="og:image">
+        <link type="text/css" rel="stylesheet" href="./alien/css/theme.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $('#nav').click(function(event){
+                    let notifdiv = document.getElementById("notif");
+                    let navsvg = document.getElementById("nav");
+                    notifdiv.classList.toggle("nav-drop");
+                    navsvg.classList.toggle("navclose");
+                });
+            });
+
+            function showImage(event) {
+                let imageUrl = event.target.src;
+                let popup = document.createElement('div');
+                popup.id = 'image-popup';
+                let img = document.createElement('img');
+                img.src = imageUrl;
+                img.classList.add('zoom');
+                popup.appendChild(img);
+                document.body.appendChild(popup);
+
+                // Remove the event listener when the popup is closed
+                let removePopup = function() {
+                  popup.removeEventListener('click', removePopup);
+                  popup.remove();
+                }
+            
+                // Add an event listener to close the popup when clicked
+                popup.addEventListener('click', removePopup);
+            }
+        </script>
+        </head>
+        <!-- Google tag (gtag.js) -->
+        <body>
+            <!-- Google Tag Manager (noscript) -->
+        <!-- End Google Tag Manager (noscript) -->
+            <div class="main">
+                <!-- NOTIFICATION START-->
+                <nav class="notify" id="notif">
+                    <div class="container col nav-list">
+                        <a href="./alien/about.html">Home</a>
+                        <a href="https://chidiebere.net">Portfolio</a>
+                        <a href="mailto:chidiebereokpechi@gmail.com?subject=Inquiry%&body=Dear%20Chidiebere,%0D%0A%0D%0AHow%20are%20you%3F%20I%20hope%20this%20email%20finds%20you%20well.%0D%0A%0D%0ABest%20regards,%0D%0A[Your%20name]">Contact</a>
+                    </div>
+                </nav>
+                <!-- NOTIFICATION ENDS -->
+                <header class="head">
+                    <div class="container row minwidth">
+                        <a class="name">VINCENT<span>.C.O</span></a>
+                        <div class="navopen m-nav" id="nav"><span></span></div>
+                        <nav class="pc-nav" id="nav">
+                            <ul class="container row">
+                                <li><a href="./alien/about.html">Home</a></li>
+                                <li><a href="https://chidiebere.net">Portfolio</a></li>
+                                <li><a href="mailto:chidiebereokpechi@gmail.com?subject=Inquiry%&body=Dear%20Chidiebere,%0D%0A%0D%0AHow%20are%20you%3F%20I%20hope%20this%20email%20finds%20you%20well.%0D%0A%0D%0ABest%20regards,%0D%0A[Your%20name]">Contact</a></li>
+                            </ul>
+                            <div class="social-cont">
+                                <a href="https://github.com/Aliencode-dev" title="My GitHub Link" target="_blank" rel="noopener" class="social-svg"><span class="github"></span></a>
+                                <a href="https://www.linkedin.com/in/vincent-okpechi/" title="My LinkedIn Link" target="_blank" rel="noopener" class="social-svg"><span class="linkedin"></span></a>
+                            </div>
+                        </nav>
+                    </div>
+                </header>
+                <div class="img-cont bottom-shadow minheight">
+                    <div class="overlay"></div>
+                    <div class="container flex-dir minwidth">
+                        <div class="txt-header">
+                            <h2 class="h2">{{name}}</h2>
+                            <p class="p">{{des}}</p>
+                            <span></span>
+                        </div>
+                        <div class="img-header project-head">
+                            <img src="./alien{{banner}}" alt="Vincent Chidiebere Okpechi">
+                        </div>
+                    </div>
+                </div>
+                <div class="project-buttons minwidth">
+                    <a href="{{link}}" {% if link|length < 1 %} disabled {% endif %} type="button" class="project-btn b">Live Project</a>
+                    <a href="{{git_link}}" {% if git_link|length < 1 %} disabled {% endif %} type="button" class="git-btn b"><div class="svg"><span></span></div> CODE</a>
+                </div>
+                <div class="front-works-cont-adj works-cont top-shadow w-bg project-body">
+                    <div class="container col minwidth">
+                        {% if wireframes|length < 1 %}
+                        
+                        <div disabled class="card">
+                            No WireFrame For Project
+                        </div>
+                        {% else %}
+                        <div class="headding">
+                            <span class="line wf long-line"></span>
+                            <h2 class="h2">Wire-Frame</h2>
+                            <span class="line wf short-line"></span>
+                        </div>
+                        <div class="content">                            
+                            {% for wireframe in wireframes %}
+                            <div class="link-cont">
+                                <div class="card">
+                                    <div class="inner-card">
+                                        <div class="img-frame only-img">
+                                            <img class="wireframe-image" src="./alien{{wireframe}}" alt="porduct name image" onclick="showImage(event)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="container col minwidth">
+                        {% if mockups|length < 1 %}
+                        
+                        <div disabled class="card">
+                            No Mockups For Project
+                        </div>
+
+                        {% else %}
+                        <div class="mock-head headding">
+                            <span class="line mock short-line"></span>
+                            <h2 class="h2">Mock-Up Designs</h2>
+                            <span class="line mock long-line"></span>
+                        </div>
+                        <div class="content"> 
+                            {% for mockup in mockups %}
+                            <div class="link-cont">
+                                <div href="" class="card">
+                                    <div class="inner-card">
+                                        <div class="img-frame only-img">
+                                            <img class="mockup-image" src="./alien{{mockup}}" alt="porduct name image" onclick="showImage(event)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="container col pdf-btn-cont minwidth">
+                        <a rel="nofollow" target="_blank" title="{{name}}-mockup-design" href="./alien{{pdf_link}}" {% if pdf_link|length < 1 %} disabled {% endif %} type="button" class="pdf-btn b">Download PDF</a>
+                    </div>
+                </div>
+                <footer class="foot">©<span id="year"></span> Vincent Chidiebere Okpechi</footer>
+            </div>
+            <script>
+                document.getElementById("year").innerHTML=new Date().getFullYear();
+            </script>
+            </body>
+            </html>
